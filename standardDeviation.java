@@ -1,20 +1,26 @@
-public static double standardDeviation (double[] list);
+public class standardDeviation {
+    public static void main(String[] args) {
+        double[] list = {10, 12, 23, 23, 16, 23, 21, 16};
+        double sd = standardDeviation(list);
+        System.out.println("Standard Deviation is: " + sd);
+    }
+
+public static double standardDeviation (double[] list)
 {
     // Finding mean of list
-    for (double i; list) {
+    double sum = 0.0;
+    for (double i: list) {
         sum += i;
     }
     int length = list.length;
     double mean = sum/length;
 
-    // calculate standard deviation 0 = 
+    // calculate standard deviation 0 =
     double standardDeviation = 0.0;
-    for (double n: list) 
-    {
-        //()
-        standardDeviation += (n - mean, 2);
-        math.sqrt(standardDeviation/length);
-
+    for (double num: list) {
+        standardDeviation += Math.pow(num - mean, 2);
     }
+    standardDeviation = Math.sqrt(standardDeviation/length);
     return standardDeviation;
+}
 }
